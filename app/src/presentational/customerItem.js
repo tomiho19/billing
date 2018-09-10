@@ -5,10 +5,8 @@ import Card from '@material-ui/core/Card';
 import CardHeader from '@material-ui/core/CardHeader';
 import CardContent from '@material-ui/core/CardContent';
 import Avatar from '@material-ui/core/Avatar';
-import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
 import red from '@material-ui/core/colors/red';
-import MoreVertIcon from '@material-ui/icons/MoreVert';
 import Button from './buttons';
 import AddNewCustomer from './addNewCustomer';
 
@@ -48,8 +46,8 @@ class RecipeReviewCard extends React.Component {
         const { classes } = this.props;
 
         return (
-            <div>
-                <Card className={classes.card}>
+            <div class="accounts">
+                <Card className={classes.card} class="account">
                     <CardHeader
                         avatar={
                             <Avatar aria-label="Recipe" className={classes.avatar}>
@@ -67,17 +65,12 @@ class RecipeReviewCard extends React.Component {
                     </CardContent>
                     <Button/>
                 </Card>
-                <Card className={classes.card}>
+                <Card className={classes.card} class="account">
                     <CardHeader
                         avatar={
                             <Avatar aria-label="Recipe" className={classes.avatar}>
                                 R
                             </Avatar>
-                        }
-                        action={
-                            <IconButton>
-                                <MoreVertIcon />
-                            </IconButton>
                         }
                         title="Name"
                         subheader="Payment"
@@ -88,7 +81,7 @@ class RecipeReviewCard extends React.Component {
                             <p>Issuing bank: </p>
                         </Typography>
                     </CardContent>
-                    <Button/>
+                    <Button class="buttonAdd"/>
                 </Card>
                 <AddNewCustomer/>
             </div>

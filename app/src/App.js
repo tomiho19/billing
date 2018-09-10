@@ -1,20 +1,20 @@
 import React, { Component } from 'react';
 import './App.css';
 
-import Payment from "./components/payment";
-import Devider from './components/devider';
+import Payment from "./presentational/payment";
+import Devider from './presentational/devider';
 
 class App extends Component {
   render() {
     return (
-        <div className={"main"}>
-            <div className={"payment"}>
+        <main className={"main"}>
+            <section className={"payment"}>
                 <Payment/>
-            </div>
-            <div className="basket">
+            </section>
+            <section className="basket">
                 <Devider/>
-            </div>
-        </div>
+            </section>
+        </main>
     );
   }
 }

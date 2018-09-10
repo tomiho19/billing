@@ -6,10 +6,13 @@
 # testing
 /coverage
 
-.idea
+.idea/
 
 # production
 /build
+
+/package-lock.json
+/.gitignore
 
 # misc
 .DS_Store

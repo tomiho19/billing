@@ -8,6 +8,7 @@ import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import AddNew from './addNew';
 import Select from './selectPayment';
+
 export default class FormDialog extends React.Component {
     state = {
         open: false,
@@ -23,8 +24,8 @@ export default class FormDialog extends React.Component {
 
     render() {
         return (
-            <div>
-                <Button onClick={this.handleClickOpen}> <AddNew/> </Button>
+            <div class="formButton">
+                <Button onClick={this.handleClickOpen} class="buttonAdd"> <AddNew/> </Button>
                 <Dialog
                     open={this.state.open}
                     onClose={this.handleClose}

@@ -1,5 +1,181 @@
-body {
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+main, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, main, menu, nav, section {
+  display: block;
+}
+/* HTML5 hidden-attribute fix for newer browsers */
+*[hidden] {
+  display: none;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+}
+
+
+main {
+  display: flex;
+  margin-top: 50px;
+}
+
+.basket {
+  width: 35%;
+}
+
+.payment {
+  width: 65%;
+  padding-right: 40px;
+}
+
+.MuiTypography-root-063 {
+  width: 100%;
+}
+
+.HorizontalLabelPositionBelowStepper-root-01 {
+  width: 100% !important;
+}
+
+.MuiListItem-root-019, .MuiListItem-default-0193, .MuiListItem-gutters-0197 {
+  padding: 0 !important;
+}
+
+.products {
+  padding: 30px 0;
+  border-top: 1.5px solid #ccc;
+  border-bottom: 1.5px solid #ccc;
+}
+
+.product {
+  display: flex;
+  padding: 10px 0;
+}
+
+.product > img {
+  width: 75px;
+  height: 75px;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 75%;
+}
+
+.wrapper p {
+  padding: 5px 0 5px 15px;
+}
+
+.basket h3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 20px;
+}
+
+.basket h3 button {
+  padding-right: 15px;
+}
+
+.additional_info {
+  border-bottom: 1.5px solid #ccc;
+}
+
+.additional_info .wrapper {
+  width: 100%;
+}
+
+.additional__item {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px;
+  padding-left: 0;
+  color: #6A6E6D;
+}
+
+.additional_info p {
+  padding: 8px;
+  padding-left: 0;
+  color: darkgray;
+  font-weight: bold;
+}
+
+.total_price {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 0 15px 0;
+}
+
+.total_price > span {
+  font-weight: bold;
+  padding-right: 10px;
+}
+
+.accounts {
+  display: flex;
+}
+
+.account {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  border: 1.5px solid #ccc;
+  margin: 15px;
+}
+
+.formButton {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 20%;
+}
+
+.dialogActions {
+  display: flex;
+  justify-content: center;
+}
+
+.selectItems, .asd123, .accounts{
+  margin-left: 40px;
 }

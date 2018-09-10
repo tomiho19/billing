@@ -1,10 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
-import green from '@material-ui/core/colors/green';
 import Radio from '@material-ui/core/Radio';
-import RadioButtonUncheckedIcon from '@material-ui/icons/RadioButtonUnchecked';
-import RadioButtonCheckedIcon from '@material-ui/icons/RadioButtonChecked';
 
 const styles = {
     checked: {},
@@ -31,7 +28,7 @@ class RadioButtons extends React.Component {
 
         return (
             <div>
-                <ul>
+                <ul className={"selectItems"}>
                     <li className={"payment_select_item"}>
                         <Radio
                             checked={this.state.selectedValue === 'PayPal'}
