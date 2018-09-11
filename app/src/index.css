@@ -60,6 +60,9 @@ main {
 
 .basket {
   width: 35%;
+  position: absolute;
+  top: 30px;
+  right: 20px;
 }
 
 .payment {
@@ -178,4 +181,10 @@ main {
 
 .selectItems, .asd123, .accounts{
   margin-left: 40px;
+}
+
+.buttons_for_account{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }

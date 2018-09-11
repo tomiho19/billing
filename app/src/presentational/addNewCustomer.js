@@ -32,6 +32,7 @@ export default class FormDialog extends React.Component {
         cvvCode: '000'
     };
 
+
     getDate(){
         let dateObj = new Date();
         let month = dateObj.getUTCMonth() + 1; //months from 1-12
@@ -50,6 +51,15 @@ export default class FormDialog extends React.Component {
     handleSave = () => {
         this.setState({id: +new Date()});
         this.props._save(this.state);
+        this.setState({
+            id: +new Date(),
+            open: false,
+            name: '',
+            address: '',
+            cardNumber: null,
+            expDate: this.getDate(),
+            cvvCode: '000'
+        });
         this.handleClose();
     }
 
