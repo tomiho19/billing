@@ -13,6 +13,7 @@ const styles = theme => ({
 
 function InsetDividers(props) {
     const { classes } = props;
+
     return (
         <div className={classes.root}>
             <h3>Shopping cart <Badge/></h3>
@@ -49,9 +50,9 @@ function InsetDividers(props) {
             <div className="price">
                 <div className="additional_info">
                     <div className="wrapper">
-                        <div className="additional__item">Asdasd<span>1300</span></div>
-                        <div className="additional__item">ASDASD ASD<span>2300</span></div>
-                        <div className="additional__item">asdasd ASD<span>3300</span></div>
+                        <div className="additional__item">Subtotal<span>1300</span></div>
+                        <div className="additional__item">Payment processing service 1%<span>2300</span></div>
+                        <div className="additional__item">VAT 21%<span>3300</span></div>
                     </div>
                 </div>
                 <div className="total_price">

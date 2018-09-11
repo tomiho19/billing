@@ -9,13 +9,12 @@ import DialogTitle from '@material-ui/core/DialogTitle';
 import AddNew from './addNew';
 import Select from './selectPayment';
 
-export default class FormDialog extends React.Component {
+export default class EditCustomer extends React.Component {
 
     constructor(props){
         super(props);
-        this.setState({isEditing: this.props.isEditing});
-        console.log('PROPS IN ADD NEW CUSTOMER', this.props);
-
+        console.log('<------------- PROPS IN EDIT  CUSTOMER', this.props);
+        // this.setState(this.props.account);
         // if(this.props.id){
         //     let currentAccount = this.props.accounts.find(el => el.id === this.props.id);
         //     this.setState(...currentAccount);
@@ -23,21 +22,8 @@ export default class FormDialog extends React.Component {
     }
 
     state = {
-        id: +new Date(),
         open: false,
-        name: '',
-        address: '',
-        cardNumber: null,
-        expDate: this.getDate(),
-        cvvCode: '000'
     };
-
-    getDate(){
-        let dateObj = new Date();
-        let month = dateObj.getUTCMonth() + 1; //months from 1-12
-        let year = dateObj.getUTCFullYear();
-        return year + '/' + month
-    }
 
     handleClickOpen = () => {
         this.setState({ open: true });
@@ -48,27 +34,32 @@ export default class FormDialog extends React.Component {
     };
 
     handleSave = () => {
-        this.setState({id: +new Date()});
-        this.props._save(this.state);
+        console.log('UPDATED STATE _', this.state);
+        this.props._edit(this.state);
         this.handleClose();
     }
 
+    componentDidMount(){
+        this.setState(this.props.account);
+    }
+
     render() {
+        console.log(this.props)
         return (
             <div className="formButton">
 
                 <Button onClick={this.handleClickOpen} class="buttonAdd">
-                     <AddNew/>
+                    <i class="fas fa-edit" >      </i>
                 </Button>
                 <Dialog
                     open={this.state.open}
                     onClose={this.handleClose}
                     aria-labelledby="form-dialog-title"
                 >
-                    <DialogTitle id="form-dialog-title">Add Customer Account</DialogTitle>
+                    <DialogTitle id="form-dialog-title">Edit Customer Account</DialogTitle>
                     <DialogContent>
                         <DialogContentText>
-                            Here you can add a new account to use our service. Specify your data to successfully save your account.
+                            Here you can edit a new account to use our service. Specify your data to successfully save your account.
                         </DialogContentText>
                         <form>
                             <input type="hidden" autocomplete="transaction-currency" value="CHF"></input>
