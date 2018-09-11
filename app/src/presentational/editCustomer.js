@@ -46,10 +46,9 @@ export default class EditCustomer extends React.Component {
     render() {
         console.log(this.props)
         return (
-            <div className="formButton">
-
+            <div>
                 <Button onClick={this.handleClickOpen} class="buttonAdd">
-                    <i class="fas fa-edit" >      </i>
+                    <i class="fas fa-edit fa-lg" >      </i>
                 </Button>
                 <Dialog
                     open={this.state.open}

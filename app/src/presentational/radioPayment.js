@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Radio from '@material-ui/core/Radio';
+import Devider from './devider';
 
 const styles = {
     checked: {},
@@ -16,12 +17,35 @@ const styles = {
 
 class RadioButtons extends React.Component {
     state = {
-        selectedValue: 'PayPal',
+        selectedValue: '',
+        total: 0,
+        vat: 0,
+        onePercent: 0
     };
+
+    constructor(props){
+        super(props);
+        this.calculate();
+    }
 
     handleChange = event => {
         console.log(event.target.value);
         this.setState({ selectedValue: event.target.value });
+        this.calculate(event.target.value);
+    };
+
+    calculate = (payment) => {
+        let total = 500;
+        let vat = total * 0.21;
+        let onePercent = total * 0.01;
+        if(payment === 'PayPal'){
+            total += vat + onePercent;
+        }
+        if(payment === 'VISA'){
+            total += onePercent;
+
+        }
+        this.setState({total, vat, onePercent});
     };
 
     render() {
@@ -60,7 +84,11 @@ class RadioButtons extends React.Component {
                         <img width="105px" height="50px" src="https://s3-eu-west-1.amazonaws.com/tpd/logos/56a2960c0000ff000587f57f/0x0.png" alt=""/>
                     </li>
                 </ul>
+                <section className="basket">
+                    <Devider selectedValue={this.state.selectedValue} total={this.state.total} vat = {this.state.vat} onePercent={this.state.onePercent} />
+                </section>
             </div>
+
         );
     }
 }

@@ -11,9 +11,7 @@ class App extends Component {
             <section className={"payment"}>
                 <Payment/>
             </section>
-            <section className="basket">
-                <Devider/>
-            </section>
+
         </main>
     );
   }
