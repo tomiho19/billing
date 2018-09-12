@@ -14,7 +14,6 @@ const styles = theme => ({
 class InsetDividers extends React.Component{
     constructor(props){
         super(props);
-        console.log('ЕТОТ СРАНЫЙ СТЕЙТ', this.props);
     }
 
     render(){
